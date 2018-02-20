@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+4.times do |concert|
+  Log.create!(name: "Concert Name",
+              artists: "Performing Artist Name One, Performing Artist or Band Name 2",
+              venue: "Venue Name")
+end
+
+puts "4 concert logs created"
