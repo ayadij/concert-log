@@ -21,9 +21,9 @@
         <td><%= log.name %></td>
         <td><%= log.artists %></td>
         <td><%= log.venue %></td>
-        <td><%= link_to 'Show', log %></td>
-        <td><%= link_to 'Edit', edit_log_path(log) %></td>
-        <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Details', log %></td>
+        <td><%= link_to 'Edit', edit_log_path(log) if logged_in?(:site_admin) %></td>
+        <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Log', new_log_path %>
+<%= link_to 'New Log', new_log_path if logged_in?(:site_admin)%>
