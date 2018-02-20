@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Concert Log</h1>
-<h3>details and actions on my concert logs</h3>
+<h3>details</h3>
 
 <hr><br>
 
@@ -23,7 +23,7 @@
         <td><%= log.venue %></td>
         <td><%= link_to 'Details', log %></td>
         <td><%= link_to 'Edit', edit_log_path(log) if logged_in?(:site_admin) %></td>
-        <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></td>
+        <td><%= link_to 'Delete', log, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,4 +31,4 @@
 
 <br>
 
-<p><%= link_to 'Create New Log', new_log_path if logged_in?(:site_admin)%>.</p>
+<p><%= link_to 'Create New Log', new_log_path if logged_in?(:site_admin)%></p>
