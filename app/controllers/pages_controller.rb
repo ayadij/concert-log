@@ -6,8 +6,7 @@ class PagesController < ApplicationController
   end
 
   def list
+    @logs = Log.all
   end
 
-  def log
-  end
 end

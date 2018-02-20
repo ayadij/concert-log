@@ -10,9 +10,20 @@
 
   <body>
 
+    <nav class='nav-bar'>
+        <%= link_to "Home", root_path %>
+        <%= link_to "About", about_path%>
+        <%= link_to "List", list_path%>
+        <%= link_to "Log", logs_path%>
+        <% if current_user %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Login", new_user_session_path %>
+        <% end %>
+    </nav>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
 
     <%= yield %>
   </body>
