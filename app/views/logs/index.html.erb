@@ -11,7 +11,7 @@
       <th>Name</th>
       <th>Artists</th>
       <th>Venue</th>
-      <th colspan="3">Actions</th>
+      <th colspan="3"><%= "Actions" if logged_in?(:site_admin) %></th>
     </tr>
   </thead>
 
@@ -31,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Log', new_log_path if logged_in?(:site_admin)%>
+<p><%= link_to 'Create New Log', new_log_path if logged_in?(:site_admin)%>.</p>
