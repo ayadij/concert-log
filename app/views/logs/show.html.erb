@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @log.name %>
+</p>
+
+<p>
+  <strong>Artists:</strong>
+  <%= @log.artists %>
+</p>
+
+<p>
+  <strong>Venue:</strong>
+  <%= @log.venue %>
+</p>
+
+<%= link_to 'Edit', edit_log_path(@log) %> |
+<%= link_to 'Back', logs_path %>
