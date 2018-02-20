@@ -14,7 +14,7 @@
         <%= link_to "Home", root_path %>
         <%= link_to "About", about_path%>
         <%= link_to "List", list_path%>
-        <%= link_to "Log", logs_path%>
+        <%= link_to "Concert Log", logs_path%>
         <% if current_user %>
           <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
         <% else %>
