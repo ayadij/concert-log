@@ -1,19 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-sm-3">
+    <%= image_tag @log.cover.url if @log.cover? %>
+  </div>
+  <div class="col-sm-9">
+    <p>
+      <strong>Name:</strong>
+      <%= @log.name %>
+    </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @log.name %>
-</p>
+    <p>
+      <strong>Artists:</strong>
+      <%= @log.artists %>
+    </p>
 
-<p>
-  <strong>Artists:</strong>
-  <%= @log.artists %>
-</p>
+    <p>
+      <strong>Venue:</strong>
+      <%= @log.venue %>
+    </p>
 
-<p>
-  <strong>Venue:</strong>
-  <%= @log.venue %>
-</p>
-
-<%= link_to 'Edit | ', edit_log_path(@log) if logged_in?(:site_admin)%>
-<%= link_to 'Back', logs_path %>
+    <%= link_to 'Edit | ', edit_log_path(@log) if logged_in?(:site_admin)%>
+    <%= link_to 'Back', logs_path %>
+  </div>
+</div>

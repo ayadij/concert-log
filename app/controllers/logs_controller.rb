@@ -51,6 +51,6 @@ class LogsController < ApplicationController
     end
 
     def log_params
-      params.require(:log).permit(:name, :artists, :venue)
+      params.require(:log).permit(:name, :artists, :venue, :cover)
     end
 end

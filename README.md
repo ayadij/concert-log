@@ -14,4 +14,3 @@
 * use bootstrap to style the nav-bar
 * use google fonts to further customization
 * implement an image link in the nav-bar
-
