@@ -60,3 +60,5 @@ gem 'carrierwave', '~> 1.2', '>= 1.2.2'
 gem 'loofah', '~> 2.2.1'
 gem 'rails-html-sanitizer', '~> 1.0.4'
 
+
+
